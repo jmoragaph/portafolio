@@ -14,17 +14,17 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('foto1.jpg');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('foto5.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .splash-content h1 {
-    font-weight: 200;
-    letter-spacing: 12px;
-    font-size: clamp(1.2rem, 5vw, 2.2rem);
+    font-weight: 100; /* Super fina */
+    letter-spacing: 15px; /* Mucho espacio entre letras para airear */
     text-transform: uppercase;
-    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    margin-bottom: 10px;
 }
 
 .splash-content p {
