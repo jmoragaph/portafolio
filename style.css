@@ -105,3 +105,55 @@ nav ul li a {
         padding: 5px 8px; /* Botón más pequeño en móvil */
     }
 }
+footer {
+    padding: 80px 5%;
+    background-color: #000;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espacio generoso entre Email e Instagram */
+}
+
+/* El efecto de subrayado */
+.link-subrayado {
+    text-decoration: none;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 8px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.link-subrayado:hover {
+    opacity: 1;
+}
+
+/* La línea que aparece al pasar el mouse */
+.link-subrayado::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; /* Grosor de la línea */
+    bottom: 0;
+    left: 0;
+    background-color: #fff; /* Color de la línea */
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.link-subrayado:hover::after {
+    width: 100%;
+}
+
+footer p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+    text-transform: uppercase;
+}
