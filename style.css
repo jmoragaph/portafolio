@@ -1,58 +1,109 @@
-/* Configuración General */
+/* Reset total para eliminar espacios blancos */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
 
-/* Navegación más compacta */
-header { padding: 20px; border-bottom: 1px solid #f0f0f0; background: white; }
-nav { display: flex; justify-content: space-between; align-items: center; max-width: 95%; margin: 0 auto; }
-.logo { font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; }
-nav ul { display: flex; list-style: none; gap: 15px; }
-nav ul li a { text-decoration: none; color: #888; font-size: 11px; text-transform: uppercase; }
+body { 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    background-color: #000; /* Fondo negro para que la foto resalte más */
+    color: #fff;
+}
 
-/* Contenedor Principal: Ahora ocupa casi toda la pantalla */
-main { width: 95%; max-width: 1600px; margin: 0 auto; padding: 20px 0; }
+/* Navegación Minimalista Flotante */
+header { 
+    padding: 30px; 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+}
 
-h2 { 
-    font-weight: 300; 
-    font-size: 1.5rem;
-    margin: 50px 0 20px 0; 
-    text-align: center;
-    letter-spacing: 3px;
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 95%; 
+    margin: 0 auto; 
+}
+
+.logo { 
+    font-weight: 700; 
+    letter-spacing: 5px; 
+    font-size: 0.8rem; 
     text-transform: uppercase;
 }
 
-/* EL CAMBIO: Solo 2 columnas para que las fotos se vean GRANDES */
-.grid {
-    column-count: 2; 
-    column-gap: 10px; /* Espacio mínimo para que casi se toquen */
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav ul li a { 
+    text-decoration: none; 
+    color: #fff; 
+    font-size: 10px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+nav ul li a:hover { opacity: 1; }
+
+/* Contenedor de impacto */
+main { width: 100%; }
+
+section { width: 100%; padding-top: 0; }
+
+.titulo-seccion {
+    padding: 100px 5% 40px;
+    font-weight: 200;
+    font-size: 2rem;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: left;
 }
 
-.galeria {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 10px;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
+/* La Fotografía como protagonista absoluta */
+.grid { 
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Sin espacio entre fotos para un look continuo */
 }
 
-.galeria img {
-    width: 100%;
+.galeria { 
+    width: 100%; 
+    display: block;
+    overflow: hidden;
+    line-height: 0; /* Elimina espacio blanco debajo de imágenes */
+}
+
+.galeria img { 
+    width: 100%; 
     height: auto; 
     display: block;
-    /* Quitamos bordes redondeados para un look más arquitectónico y limpio */
+    filter: brightness(0.9);
+    transition: filter 0.6s ease, transform 0.8s ease;
 }
 
-.galeria:hover {
-    opacity: 0.9;
+.galeria img:hover { 
+    filter: brightness(1.1);
+    transform: scale(1.02); /* Un zoom muy sutil al pasar el mouse */
 }
 
-/* En celulares: 1 sola columna para máximo zoom */
-@media (max-width: 700px) {
-    .grid { column-count: 1; }
-    nav { flex-direction: column; gap: 10px; }
+/* Footer Minimal */
+footer { 
+    padding: 100px 5%; 
+    background: #000; 
+    text-align: left;
+    border-top: 1px solid #222;
 }
 
-/* Footer Negro Elegante */
-footer { text-align: center; padding: 80px; background: #000; color: #fff; margin-top: 100px; }
-.social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
-.social-links a { color: #fff; text-decoration: none; font-size: 12px; border: 1px solid #fff; padding: 10px 20px; }
+.social-links { margin-top: 30px; display: flex; gap: 40px; }
+.social-links a { 
+    color: #555; 
+    text-decoration: none; 
+    font-size: 11px; 
+    letter-spacing: 2px;
+}
+.social-links a:hover { color: #fff; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .titulo-seccion { font-size: 1.2rem; }
+    nav ul { display: none; } /* En móvil ocultamos menú para limpiar la vista */
+}
