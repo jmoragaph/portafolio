@@ -1,11 +1,20 @@
-html { scroll-behavior: smooth; }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* --- CONFIGURACIÓN BASE --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
 body { 
     background-color: #000; 
     color: #fff; 
     font-family: 'Inter', sans-serif; 
     overflow-x: hidden; 
+    -webkit-font-smoothing: antialiased;
 }
 
 /* --- PORTADA (SPLASH) --- */
@@ -40,7 +49,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 30px 5%; /* Más aire como al principio */
+    padding: 30px 5%;
     z-index: 2000;
     background: rgba(0,0,0,0.6);
     backdrop-filter: blur(10px);
@@ -78,7 +87,6 @@ nav ul li a {
     transition: 0.4s;
 }
 
-/* EL BOTÓN DESTACADO DEL MENÚ */
 .btn-contacto {
     background: #fff;
     color: #000 !important;
@@ -103,6 +111,9 @@ section {
     font-size: 1.1rem;
     margin-bottom: 60px;
     opacity: 0.9;
+    text-align: center;
+}
+
 .grid {
     display: flex;
     flex-direction: column;
@@ -118,18 +129,21 @@ section {
     flex: 1; 
 }
 
-.grid img {
+/* EFECTO BLANCO Y NEGRO A COLOR REPARADO */
+.galeria img {
     width: 100%;
     height: auto;
     display: block;
-    filter: grayscale(100%); /* Blanco y Negro de base */
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
     transition: filter 0.6s ease, transform 0.6s ease;
 }
 
-.grid img:hover {
-    filter: grayscale(0%); /* Color al pasar el cursor */
-    transform: scale(1.02); /* Zoom suave */
-} /* <--- ESTA LLAVE ES LA QUE FALTABA */
+.galeria:hover img {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    transform: scale(1.02);
+}
 
 .divisor {
     border: 0;
@@ -137,9 +151,8 @@ section {
     background: rgba(255,255,255,0.1);
     margin: 40px 5%;
 }
-}
 
-/* --- FOOTER Y RRSS (LO QUE FALTABA) --- */
+/* --- FOOTER Y RRSS --- */
 footer {
     padding: 120px 5% 60px;
     text-align: center;
@@ -160,6 +173,7 @@ footer {
     position: relative;
     padding-bottom: 8px;
     opacity: 0.7;
+    transition: 0.3s;
 }
 
 .link-subrayado::after {
@@ -183,21 +197,15 @@ footer p {
     opacity: 0.3;
 }
 
-/* --- AJUSTE MÓVIL (SIN SUPERPOSICIÓN) --- */
+/* --- AJUSTE MÓVIL --- */
 @media (max-width: 768px) {
     header { padding: 20px 5%; }
-    
     .logo { margin-bottom: 10px; }
-    
     nav { flex-direction: column; }
-    
     nav ul { gap: 12px; }
-
     nav ul li a { font-size: 8px; letter-spacing: 1px; }
-
     .row { flex-direction: column; }
-    
-    .grid img { filter: grayscale(0); }
+    .galeria img { filter: grayscale(0); } /* En móvil se ve a color para mejor experiencia */
 }
 
 /* ANIMACIONES */
