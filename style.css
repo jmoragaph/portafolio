@@ -1,55 +1,58 @@
 /* Configuración General */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background-color: #fff; color: #1a1a1a; }
+body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
 
-/* Navegación */
-header { padding: 30px; border-bottom: 1px solid #f0f0f0; }
-nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-.logo { font-weight: 700; letter-spacing: 2px; }
-nav ul { display: flex; list-style: none; gap: 20px; }
-nav ul li a { text-decoration: none; color: #666; font-size: 12px; text-transform: uppercase; }
+/* Navegación más compacta */
+header { padding: 20px; border-bottom: 1px solid #f0f0f0; background: white; }
+nav { display: flex; justify-content: space-between; align-items: center; max-width: 95%; margin: 0 auto; }
+.logo { font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; }
+nav ul { display: flex; list-style: none; gap: 15px; }
+nav ul li a { text-decoration: none; color: #888; font-size: 11px; text-transform: uppercase; }
 
-/* Sección Perfil */
-#sobre-mi { text-align: center; padding: 60px 20px; }
-.foto-perfil { border-radius: 50%; width: 120px; height: 120px; object-fit: cover; margin-bottom: 20px; }
+/* Contenedor Principal: Ahora ocupa casi toda la pantalla */
+main { width: 95%; max-width: 1600px; margin: 0 auto; padding: 20px 0; }
 
-/* EL ARREGLO MÁGICO: Diseño de Columnas */
-main { max-width: 1200px; margin: 0 auto; padding: 20px; }
-h2 { font-weight: 300; margin: 40px 0 20px 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+h2 { 
+    font-weight: 300; 
+    font-size: 1.5rem;
+    margin: 50px 0 20px 0; 
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
 
+/* EL CAMBIO: Solo 2 columnas para que las fotos se vean GRANDES */
 .grid {
-    column-count: 3; /* Divide en 3 columnas */
-    column-gap: 15px; /* Espacio entre columnas */
+    column-count: 2; 
+    column-gap: 10px; /* Espacio mínimo para que casi se toquen */
 }
 
 .galeria {
-    display: inline-block; /* Evita que la foto se corte entre columnas */
+    display: inline-block;
     width: 100%;
-    margin-bottom: 15px; /* Espacio hacia abajo */
+    margin-bottom: 10px;
     text-decoration: none;
+    transition: opacity 0.3s ease;
 }
 
 .galeria img {
     width: 100%;
-    height: auto; /* Mantiene la proporción real */
+    height: auto; 
     display: block;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
+    /* Quitamos bordes redondeados para un look más arquitectónico y limpio */
 }
 
-.galeria img:hover {
-    transform: scale(1.02);
+.galeria:hover {
+    opacity: 0.9;
 }
 
-/* Para celulares: solo 1 columna */
-@media (max-width: 800px) {
-    .grid { column-count: 2; }
-}
-@media (max-width: 500px) {
+/* En celulares: 1 sola columna para máximo zoom */
+@media (max-width: 700px) {
     .grid { column-count: 1; }
+    nav { flex-direction: column; gap: 10px; }
 }
 
-/* Footer */
-footer { text-align: center; padding: 60px; background: #000; color: #fff; margin-top: 50px; }
+/* Footer Negro Elegante */
+footer { text-align: center; padding: 80px; background: #000; color: #fff; margin-top: 100px; }
 .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
-.social-links a { color: #fff; text-decoration: none; font-size: 13px; }
+.social-links a { color: #fff; text-decoration: none; font-size: 12px; border: 1px solid #fff; padding: 10px 20px; }
