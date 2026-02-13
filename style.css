@@ -1,109 +1,95 @@
-/* Reset total para eliminar espacios blancos */
+/* Reset y Base */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
+html { scroll-behavior: smooth; }
 body { 
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-    background-color: #000; /* Fondo negro para que la foto resalte más */
+    font-family: 'Inter', 'Helvetica Neue', sans-serif; 
+    background-color: #000; 
     color: #fff;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Navegación Minimalista Flotante */
+/* Navegación Invisible que aparece al hacer scroll o fija */
 header { 
-    padding: 30px; 
+    padding: 40px 5%; 
     position: fixed; 
     top: 0; 
     width: 100%; 
-    z-index: 1000; 
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1000;
+    mix-blend-mode: difference; /* Esto hace que el texto sea blanco sobre negro y negro sobre blanco automáticamente */
 }
 
-nav { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    max-width: 95%; 
-    margin: 0 auto; 
-}
-
-.logo { 
-    font-weight: 700; 
-    letter-spacing: 5px; 
-    font-size: 0.8rem; 
-    text-transform: uppercase;
-}
-
-nav ul { display: flex; list-style: none; gap: 30px; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: 600; letter-spacing: 6px; font-size: 0.75rem; text-transform: uppercase; }
+nav ul { display: flex; list-style: none; gap: 40px; }
 nav ul li a { 
     text-decoration: none; 
     color: #fff; 
-    font-size: 10px; 
+    font-size: 9px; 
     text-transform: uppercase; 
-    letter-spacing: 2px;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+    letter-spacing: 3px;
 }
-nav ul li a:hover { opacity: 1; }
 
-/* Contenedor de impacto */
-main { width: 100%; }
-
-section { width: 100%; padding-top: 0; }
+/* Secciones de Imagen a Pantalla Completa */
+section { width: 100%; position: relative; }
 
 .titulo-seccion {
-    padding: 100px 5% 40px;
+    padding: 120px 5% 40px;
     font-weight: 200;
-    font-size: 2rem;
-    letter-spacing: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 12px;
     text-transform: uppercase;
-    text-align: left;
+    color: rgba(255,255,255,0.5); /* Texto sutil para no competir con la foto */
 }
 
-/* La Fotografía como protagonista absoluta */
-.grid { 
-    display: flex;
-    flex-direction: column;
-    gap: 0; /* Sin espacio entre fotos para un look continuo */
-}
+.grid { display: flex; flex-direction: column; width: 100%; }
 
 .galeria { 
     width: 100%; 
     display: block;
+    margin-bottom: 2px; /* Un hilo de separación casi invisible */
     overflow: hidden;
-    line-height: 0; /* Elimina espacio blanco debajo de imágenes */
 }
 
 .galeria img { 
     width: 100%; 
     height: auto; 
     display: block;
-    filter: brightness(0.9);
-    transition: filter 0.6s ease, transform 0.8s ease;
+    transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1), filter 1s ease;
 }
 
-.galeria img:hover { 
+/* Efecto de revelado al pasar el mouse */
+.galeria:hover img { 
+    transform: scale(1.05);
     filter: brightness(1.1);
-    transform: scale(1.02); /* Un zoom muy sutil al pasar el mouse */
 }
 
-/* Footer Minimal */
+/* Footer que respira */
 footer { 
-    padding: 100px 5%; 
+    padding: 150px 5% 50px; 
     background: #000; 
-    text-align: left;
-    border-top: 1px solid #222;
+    text-align: center;
 }
 
-.social-links { margin-top: 30px; display: flex; gap: 40px; }
-.social-links a { 
-    color: #555; 
-    text-decoration: none; 
-    font-size: 11px; 
-    letter-spacing: 2px;
+.social-links { 
+    margin: 40px 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 50px; 
 }
-.social-links a:hover { color: #fff; }
+
+.social-links a { 
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 10px; 
+    letter-spacing: 4px;
+    opacity: 0.4;
+    transition: opacity 0.5s;
+}
+.social-links a:hover { opacity: 1; }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .titulo-seccion { font-size: 1.2rem; }
-    nav ul { display: none; } /* En móvil ocultamos menú para limpiar la vista */
+    .logo { letter-spacing: 3px; }
+    nav ul { display: none; }
+    .titulo-seccion { font-size: 1rem; padding-top: 80px; }
 }
