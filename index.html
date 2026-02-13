@@ -6,13 +6,14 @@
     <title>JOCELYN MORAGA RODRÍGUEZ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="splash">
     <div class="splash-content">
-        <h1>JOCELYN MORAGA RODRÍGUEZ</h1>
-        <p>ARQUITECTURA & NARRATIVA VISUAL</p>
+        <h1 class="fade-in">JOCELYN MORAGA RODRÍGUEZ</h1>
+        <p class="fade-in-delayed">ARQUITECTURA & NARRATIVA VISUAL</p>
     </div>
 </div>
 
@@ -21,7 +22,8 @@
         <div class="logo">JMR</div>
         <ul>
             <li><a href="#arquitectura">Arquitectura</a></li>
-            <li><a href="#artistico">Ataraxia</a></li>
+            <li><a href="#ataraxia">Ataraxia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 </header>
@@ -30,28 +32,35 @@
     <section id="arquitectura">
         <h2 class="titulo-seccion">Arquitectura</h2>
         <div class="grid">
-            <a class="galeria full" href="foto1.jpg"><img src="foto1.jpg"></a>
-            
             <div class="row">
+                <a class="galeria" href="foto1.jpg"><img src="foto1.jpg"></a>
                 <a class="galeria" href="foto2.jpg"><img src="foto2.jpg"></a>
+            </div>
+            <div class="row">
                 <a class="galeria" href="foto3.jpg"><img src="foto3.jpg"></a>
+                <a class="galeria" href="foto4.jpg"><img src="foto4.jpg"></a>
             </div>
         </div>
     </section>
 
-    <section id="artistico">
+    <hr class="divisor">
+
+    <section id="ataraxia">
         <h2 class="titulo-seccion">Ataraxia</h2>
         <div class="grid">
-            <a class="galeria full" href="04.jpg"><img src="04.jpg"></a>
             <div class="row">
+                <a class="galeria" href="04.jpg"><img src="04.jpg"></a>
                 <a class="galeria" href="09.jpg"><img src="09.jpg"></a>
+            </div>
+            <div class="row">
                 <a class="galeria" href="08.jpg"><img src="08.jpg"></a>
+                <a class="galeria" href="foto5.jpg"><img src="foto5.jpg"></a>
             </div>
         </div>
     </section>
 </main>
 
-<footer>
+<footer id="contacto">
     <div class="social-links">
         <a href="mailto:Jotaemearq@gmail.com">EMAIL</a>
         <a href="https://instagram.com/tuusuario">INSTAGRAM</a>
@@ -61,6 +70,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/Luminous.min.js"></script>
 <script>
+    // Activa el zoom
     new LuminousGallery(document.querySelectorAll(".galeria"));
 </script>
 
