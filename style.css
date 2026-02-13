@@ -1,207 +1,87 @@
-/* --- RESET Y BASE --- */
+/* --- ESTILO RADICAL MINIMALISTA --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #000;
+    color: #fff;
+    /* Usamos fuentes del sistema: son las más limpias, rápidas y finas */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
 html { scroll-behavior: smooth; }
-body { 
-    background-color: #000; 
-    color: #fff; 
-    font-family: 'Inter', sans-serif; 
-    overflow-x: hidden; 
-}
 
-/* --- PORTADA (SPLASH) --- */
-.splash {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('foto1.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.splash-content h1 {
-    font-weight: 200;
-    letter-spacing: 12px;
-    font-size: clamp(1.2rem, 5vw, 2.2rem);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.splash-content p {
-    font-weight: 400;
-    letter-spacing: 10px;
-    font-size: 0.7rem;
-    opacity: 0.8;
-}
-
-/* --- HEADER (MENÚ FIJO) --- */
+/* --- NAVEGACIÓN (Limpia y protegida) --- */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 30px 5%; /* Más aire como al principio */
+    padding: 40px 5%;
     z-index: 2000;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
 .logo {
+    font-weight: 500;
     letter-spacing: 5px;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.8rem;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 25px;
-    align-items: center;
+    gap: 30px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 10px;
+    font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    opacity: 0.6;
+    opacity: 0.5;
     transition: 0.4s;
 }
 
-/* EL BOTÓN DESTACADO DEL MENÚ */
-.btn-contacto {
-    background: #fff;
-    color: #000 !important;
-    padding: 8px 18px;
+nav ul li a:hover, .btn-contacto {
     opacity: 1 !important;
-    font-weight: 600;
-    border-radius: 2px;
 }
 
-/* --- SECCIONES Y GRID --- */
-section {
-    padding: 100px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-    scroll-margin-top: 100px;
+/* BOTÓN DE CONTACTO (Sin fondo, solo resaltado) */
+.btn-contacto {
+    font-weight: 700 !important;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
 }
 
-.titulo-seccion {
-    font-weight: 200;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    margin-bottom: 60px;
-    opacity: 0.9;
-}
-
-.grid {
+/* --- PORTADA --- */
+.splash {
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.row {
-    display: flex;
-    gap: 15px;
-}
-
-.row a { flex: 1; }
-
-.grid img {
-    width: 100%;
-    height: auto; /* Volvemos al alto automático para no deformar */
-    display: block;
-    filter: grayscale(30%);
-    transition: 0.6s ease;
-}
-
-.grid img:hover {
-    filter: grayscale(0%);
-}
-
-.divisor {
-    border: 0;
-    height: 1px;
-    background: rgba(255,255,255,0.1);
-    margin: 20px 5%;
-}
-
-/* --- FOOTER Y RRSS (LO QUE FALTABA) --- */
-footer {
-    padding: 120px 5% 60px;
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
+    background: #000 url('tu-foto-portada.jpg') center/cover no-repeat;
 }
 
-.link-subrayado {
-    text-decoration: none;
-    color: #fff;
-    font-size: 11px;
-    letter-spacing: 4px;
-    position: relative;
-    padding-bottom: 8px;
-    opacity: 0.7;
+.splash-content h1 {
+    font-weight: 200;
+    letter-spacing: 15px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
 }
 
-.link-subrayado::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transition: width 0.4s ease;
-}
+/* --- GRID DE IMÁGENES (Proporción Natural) --- */
+main { padding: 0 5%; }
 
-.link-subrayado:hover::after {
-    width: 100%;
-}
-
-footer p {
-    font-size: 9px;
-    letter-spacing: 2px;
-    opacity: 0.3;
-}
-
-/* --- AJUSTE MÓVIL (SIN SUPERPOSICIÓN) --- */
-@media (max-width: 768px) {
-    header { padding: 20px 5%; }
-    
-    .logo { margin-bottom: 10px; }
-    
-    nav { flex-direction: column; }
-    
-    nav ul { gap: 12px; }
-
-    nav ul li a { font-size: 8px; letter-spacing: 1px; }
-
-    .row { flex-direction: column; }
-    
-    .grid img { filter: grayscale(0); }
-}
-
-/* ANIMACIONES */
-.fade-in { animation: fadeIn 2s ease forwards; }
-.fade-in-delayed { opacity: 0; animation: fadeIn 2s ease 1s forwards; }
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+section {
+    padding: 100px 0;
+    max-width: 1600px;
+    margin: 0 auto;
