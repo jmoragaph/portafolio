@@ -120,15 +120,15 @@ section {
 
 .grid img {
     width: 100%;
-    height: auto; /* Volvemos al alto automático para no deformar */
+    height: auto;
     display: block;
-    filter: grayscale(30%);
-    transition: 0.6s ease;
+    filter: grayscale(100%); /* Empieza en Blanco y Negro */
+    transition: filter 0.6s ease, transform 0.6s ease;
 }
 
 .grid img:hover {
-    filter: grayscale(0%);
-}
+    filter: grayscale(0%); /* Pasa a color al tocarla */
+    transform: scale(1.02); /* Pequeño zoom elegante */
 
 .divisor {
     border: 0;
