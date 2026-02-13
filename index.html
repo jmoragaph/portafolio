@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Fotográfico | Tu Nombre</title>
+    <title>Portfolio Fotográfico</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
 </head>
 <body>
 
@@ -19,15 +19,19 @@
             </ul>
         </nav>
     </header>
-
+<section id="sobre-mi" style="text-align: center; padding: 40px;">
+    <img src="tu-foto.jpg" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+    <h2>Hola, soy [Tu Nombre]</h2>
+    <p>Fotógrafo especializado en capturar la esencia de los espacios y la narrativa visual artística.</p>
+</section>
     <main>
         <section id="arquitectura">
             <h2>Fotografía de Arquitectura</h2>
             <p>Líneas, estructuras y espacios urbanos.</p>
             <div class="grid">
-                <div class="card"><img src="foto4.jpg" alt="Arquitectura 1"></div>
-                <div class="card"><img src="foto2.jpg" alt="Arquitectura 2"></div>
-                <div class="card"><img src="foto3.jpg" alt="Arquitectura 3"></div>
+                <a class="zoom" href="foto1.jpg"><img src="foto1.jpg" alt="Foto 1"></a>
+                <a class="zoom" href="foto2.jpg"><img src="foto2.jpg" alt="Foto 2"></a>
+                <a class="zoom" href="foto3.jpg"><img src="foto3.jpg" alt="Foto 3"></a>
             </div>
         </section>
 
@@ -47,6 +51,9 @@
     <footer id="contacto">
         <p>© 2026 Jocelyn Moraga Rodríguez | <a href="Jotaemearq@gmail.com">Contáctame</a></p>
     </footer>
-
+<div class="social-links">
+    <a href="https://instagram.com/tuusuario">Instagram</a>
+    <a href="https://wa.me/tu-numero-de-telefono">WhatsApp</a>
+</div>
 </body>
 </html>
