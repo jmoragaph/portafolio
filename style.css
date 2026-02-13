@@ -11,6 +11,26 @@ body {
     line-height: 1.6;
 }
 
+.grid a {
+    display: block;
+    width: 100%;
+    height: 400px; 
+    overflow: hidden; 
+    border-radius: 4px;
+}
+
+
+.grid img {
+    width: 100%;
+    height: 100%; /
+    object-fit: cover; /
+    object-position: center; /
+    transition: transform 0.4s ease;
+}
+
+.grid img:hover {
+    transform: scale(1.1); /
+}
 header {
     padding: 2rem;
     position: sticky;
