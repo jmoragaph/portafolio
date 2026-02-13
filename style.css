@@ -1,31 +1,41 @@
-/* --- RESET Y BASE --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { 
-    background-color: #000; 
-    color: #fff; 
-    font-family: 'Inter', sans-serif; 
-    overflow-x: hidden; 
+/* --- CONFIGURACIÓN BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-box-sizing: border-box;
 }
 
-/* --- PORTADA (SPLASH) --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- SPLASH / PORTADA --- */
 .splash {
     height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('foto1.jpg'); /* Reemplaza con tu mejor foto */
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('foto1.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .splash-content h1 {
     font-weight: 200;
     letter-spacing: 12px;
-    font-size: clamp(1.2rem, 5vw, 2.2rem);
+    font-size: clamp(1rem, 5vw, 2rem);
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .splash-content p {
@@ -33,38 +43,40 @@ body {
     letter-spacing: 10px;
     font-size: 0.7rem;
     opacity: 0.8;
+    text-transform: uppercase;
 }
 
-/* --- HEADER (MENÚ FIJO) --- */
+/* --- HEADER / NAVEGACIÓN --- */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 30px 5%; /* Más aire como al principio */
-    z-index: 2000;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    padding: 20px 5%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 nav {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .logo {
-    letter-spacing: 5px;
-    font-size: 0.9rem;
     font-weight: 600;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -72,61 +84,74 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 10px;
-    text-transform: uppercase;
     letter-spacing: 2px;
+    text-transform: uppercase;
     opacity: 0.6;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
-/* EL BOTÓN DESTACADO DEL MENÚ */
+nav ul li a:hover {
+    opacity: 1;
+}
+
+/* BOTÓN DE CONTACTO EN MENÚ */
 .btn-contacto {
     background: #fff;
     color: #000 !important;
-    padding: 8px 18px;
-    opacity: 1 !important;
+    padding: 8px 16px;
     font-weight: 600;
+    opacity: 1 !important;
     border-radius: 2px;
 }
 
-/* --- SECCIONES Y GRID --- */
+/* --- MAIN & SECCIONES --- */
+main {
+    padding: 60px 5%;
+}
+
 section {
-    padding: 100px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-    scroll-margin-top: 100px;
+    padding: 80px 0;
+    scroll-margin-top: 100px; /* Evita que el menú tape el título al hacer clic */
 }
 
 .titulo-seccion {
     font-weight: 200;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     text-transform: uppercase;
-    font-size: 1.1rem;
-    margin-bottom: 60px;
-    opacity: 0.9;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
+/* --- GRID DE IMÁGENES --- */
 .grid {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .row {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
-.row a { flex: 1; }
+.row a {
+    flex: 1;
+    overflow: hidden;
+}
 
 .grid img {
     width: 100%;
-    height: auto; /* Volvemos al alto automático para no deformar */
-    display: block;
-    filter: grayscale(30%);
-    transition: 0.6s ease;
+    height: 600px; /* Altura fija para que todas se vean iguales */
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: transform 0.8s ease, filter 0.5s ease;
 }
 
 .grid img:hover {
+    transform: scale(1.03);
     filter: grayscale(0%);
 }
 
@@ -134,19 +159,20 @@ section {
     border: 0;
     height: 1px;
     background: rgba(255,255,255,0.1);
-    margin: 20px 5%;
+    margin: 40px 0;
 }
 
-/* --- FOOTER Y RRSS (LO QUE FALTABA) --- */
+/* --- FOOTER & RRSS --- */
 footer {
-    padding: 120px 5% 60px;
+    padding: 100px 5% 50px;
     text-align: center;
+    background: #000;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     margin-bottom: 40px;
 }
 
@@ -156,10 +182,16 @@ footer {
     font-size: 11px;
     letter-spacing: 4px;
     position: relative;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
     opacity: 0.7;
+    transition: opacity 0.3s;
 }
 
+.link-subrayado:hover {
+    opacity: 1;
+}
+
+/* La línea animada */
 .link-subrayado::after {
     content: '';
     position: absolute;
@@ -168,7 +200,7 @@ footer {
     bottom: 0;
     left: 0;
     background-color: #fff;
-    transition: width 0.4s ease;
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .link-subrayado:hover::after {
@@ -181,6 +213,51 @@ footer p {
     opacity: 0.3;
 }
 
-/* --- AJUSTE MÓVIL (SIN SUPERPOSICIÓN) --- */
+/* --- RESPONSIVE (MÓVIL) --- */
 @media (max-width: 768px) {
-    header { padding: 20px
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .grid img {
+        height: 400px;
+    }
+
+    .social-links {
+        gap: 20px;
+        flex-direction: column;
+    }
+}
+
+/* ANIMACIONES */
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.fade-in-delayed {
+    opacity: 0;
+    animation: fadeIn 1.5s ease 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
