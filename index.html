@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Fotográfico</title>
+    <title>Jocelyn Moraga Rodríguez | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
 </head>
@@ -14,24 +14,25 @@
             <div class="logo">JOCELYN MORAGA RODRÍGUEZ</div>
             <ul>
                 <li><a href="#arquitectura">Arquitectura</a></li>
-                <li><a href="#artistico">Proyecto Artístico</a></li>
+                <li><a href="#artistico">Ataraxia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
-<section id="sobre-mi" style="text-align: center; padding: 40px;">
-    <img src="tu-foto.jpg" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
-    <h2>Hola, soy [Tu Nombre]</h2>
-    <p>Fotógrafo especializado en capturar la esencia de los espacios y la narrativa visual artística.</p>
-</section>
+
+    <section id="sobre-mi">
+        <img src="perfil.jpg" alt="Jocelyn Moraga" class="foto-perfil">
+        <h2>Hola, soy Jocelyn Moraga</h2>
+        <p>Fotógrafa especializada en capturar la esencia de los espacios y la narrativa visual artística.</p>
+    </section>
+
     <main>
         <section id="arquitectura">
             <h2>Arquitectura</h2>
             <div class="grid">
-                <a class="zoom" href="foto1.jpg"><img src="foto1.jpg" alt="Descripción">
-</a>
-                <a class="zoom" href="foto2.jpg"><img src="foto2.jpg" alt="Foto 2"></a>
-                <a class="zoom" href="foto3.jpg"><img src="foto3.jpg" alt="Foto 3"></a>
+                <a class="galeria" href="foto1.jpg"><img src="foto1.jpg" alt="Arquitectura 1"></a>
+                <a class="galeria" href="foto2.jpg"><img src="foto2.jpg" alt="Arquitectura 2"></a>
+                <a class="galeria" href="foto3.jpg"><img src="foto3.jpg" alt="Arquitectura 3"></a>
             </div>
         </section>
 
@@ -41,19 +42,25 @@
             <h2>Proyecto Artístico: "Ataraxia"</h2>
             <p>Una exploración personal sobre la luz y la forma.</p>
             <div class="grid">
-                <div class="card"><img src="04.jpg" alt="Arte 1"></div>
-                <div class="card"><img src="09.jpg" alt="Arte 2"></div>
-                <div class="card"><img src="08.jpg" alt="Arte 3"></div>
+                <a class="galeria" href="04.jpg"><img src="04.jpg" alt="Ataraxia 1"></a>
+                <a class="galeria" href="09.jpg"><img src="09.jpg" alt="Ataraxia 2"></a>
+                <a class="galeria" href="08.jpg"><img src="08.jpg" alt="Ataraxia 3"></a>
             </div>
         </section>
     </main>
 
     <footer id="contacto">
-        <p>© 2026 Jocelyn Moraga Rodríguez | <a href="Jotaemearq@gmail.com">Contáctame</a></p>
+        <p>© 2026 Jocelyn Moraga Rodríguez</p>
+        <div class="social-links">
+            <a href="mailto:Jotaemearq@gmail.com">Email</a>
+            <a href="https://instagram.com/tuusuario" target="_blank">Instagram</a>
+            <a href="https://wa.me/tunúmero" target="_blank">WhatsApp</a>
+        </div>
     </footer>
-<div class="social-links">
-    <a href="https://instagram.com/tuusuario">Instagram</a>
-    <a href="https://wa.me/tu-numero-de-telefono">WhatsApp</a>
-</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/Luminous.min.js"></script>
+    <script>
+        new LuminousGallery(document.querySelectorAll(".galeria"));
+    </script>
 </body>
 </html>
