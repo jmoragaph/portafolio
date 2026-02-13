@@ -68,7 +68,7 @@ nav ul li a:hover, .btn-contacto {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000 url('tu-foto-portada.jpg') center/cover no-repeat;
+    background: #000 url('05.jpg') center/cover no-repeat;
 }
 
 .splash-content h1 {
