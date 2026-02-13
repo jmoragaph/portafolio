@@ -20,7 +20,10 @@ body {
     background-position: center;
 }
 
-.splash-content h1 {
+    .splash-content h1 {
+
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
     font-weight: 200;
     letter-spacing: 12px;
     font-size: clamp(1.2rem, 5vw, 2.2rem);
