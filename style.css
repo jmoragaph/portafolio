@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('foto5.jpg');
+   background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('foto5.jpg');
     background-size: cover;
     background-position: center;
 }
