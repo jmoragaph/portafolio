@@ -15,23 +15,21 @@ body {
     font-family: 'Inter', sans-serif; 
     overflow-x: hidden; 
     -webkit-font-smoothing: antialiased;
-} /* <-- AQUÍ ESTABA EL ERROR, AHORA ESTÁ BIEN CERRADO */
+}
 
-/* --- PORTADA (SPLASH) - MEJORADO --- */
+/* --- PORTADA (SPLASH) --- */
 .splash {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Subimos la opacidad del negro (0.5) para que el texto blanco "brille" más */
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('foto5.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .splash-content {
-    /* Sombra radial sutil para separar el texto del fondo */
     background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 70%);
     padding: 40px;
     z-index: 1;
@@ -43,7 +41,7 @@ body {
     font-size: clamp(1.5rem, 6vw, 2.5rem);
     text-transform: uppercase;
     margin-bottom: 20px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Sombra más fuerte para lectura */
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 .splash-content p {
@@ -61,166 +59,10 @@ header {
     width: 100%;
     padding: 30px 5%;
     z-index: 2000;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7); /* Un poco más oscuro para que no se pierda nada */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.logo {
-    letter-spacing: 5px;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-    align-items: center;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.6;
-    transition: 0.4s;
-}
-
-.btn-contacto {
-    background: #fff;
-    color: #000 !important;
-    padding: 8px 18px;
-    opacity: 1 !important;
-    font-weight: 600;
-    border-radius: 2px;
-}
-
-/* --- SECCIONES Y GRID --- */
-section {
-    padding: 100px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-    scroll-margin-top: 100px;
-}
-
-.titulo-seccion {
-    font-weight: 200;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    margin-bottom: 60px;
-    opacity: 0.9;
-    text-align: center;
-}
-
-.grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.row {
-    display: flex;
-    gap: 15px;
-}
-
-.row a { 
-    flex: 1; 
-}
-
-.galeria img {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    transition: filter 0.6s ease, transform 0.6s ease;
-}
-
-.galeria:hover img {
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-    transform: scale(1.02);
-}
-
-.divisor {
-    border: 0;
-    height: 1px;
-    background: rgba(255,255,255,0.1);
-    margin: 40px 5%;
-}
-
-/* --- FOOTER Y RRSS --- */
-footer {
-    padding: 120px 5% 60px;
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.link-subrayado {
-    text-decoration: none;
-    color: #fff;
-    font-size: 11px;
-    letter-spacing: 4px;
-    position: relative;
-    padding-bottom: 8px;
-    opacity: 0.7;
-    transition: 0.3s;
-}
-
-.link-subrayado::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transition: width 0.4s ease;
-}
-
-.link-subrayado:hover::after {
-    width: 100%;
-}
-
-footer p {
-    font-size: 9px;
-    letter-spacing: 2px;
-    opacity: 0.3;
-}
-
-/* --- AJUSTE MÓVIL --- */
-@media (max-width: 768px) {
-    header { padding: 20px 5%; }
-    .logo { margin-bottom: 10px; }
-    nav { flex-direction: column; }
-    nav ul { gap: 12px; }
-    nav ul li a { font-size: 8px; letter-spacing: 1px; }
-    .row { flex-direction: column; }
-    .galeria img { filter: grayscale(0); }
-}
-
-/* ANIMACIONES */
-.fade-in { animation: fadeIn 2s ease forwards; }
-.fade-in-delayed { opacity: 0; animation: fadeIn 2s ease 1s forwards; }
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
