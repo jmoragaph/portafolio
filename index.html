@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
 
 <div class="splash">
     <div class="splash-content">
@@ -22,6 +21,7 @@
     <nav>
         <div class="logo">MR</div>
         <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
             <li><a href="#arquitectura">Arq</a></li>
             <li><a href="#urbano">Urbano</a></li>
             <li><a href="#ataraxia">Obras</a></li>
@@ -31,6 +31,21 @@
 </header>
 
 <main>
+    <section id="sobre-mi" class="seccion-perfil">
+        <div class="perfil-container">
+            <div class="perfil-foto">
+                <img src="perfil.jpg" alt="María Rodríguez">
+            </div>
+            <div class="perfil-texto">
+                <h2 class="titulo-seccion">Sobre mí</h2>
+                <p>Arquitecta con enfoque en la narrativa visual y el espacio urbano. Mi trabajo busca capturar la esencia del minimalismo a través de la fotografía y el diseño, explorando la relación entre la estructura, la luz y la forma.</p>
+                <p>Especializada en documentación de obra y proyectos de paisaje, entiendo la arquitectura como un lenguaje que se narra a través del encuadre.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divisor">
+
     <section id="arquitectura">
         <h2 class="titulo-seccion">Arquitectura</h2>
         <div class="grid">
@@ -85,6 +100,7 @@
     </div>
     <p>© 2026 MARÍA RODRÍGUEZ </p>
 </footer>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/Luminous.min.js"></script>
 <script>
     new LuminousGallery(document.querySelectorAll(".galeria"));
