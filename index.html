@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARÍA RODRÍGUEZ</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="luminous-basic.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
@@ -73,11 +74,16 @@
     <p>© 2026 MARÍA RODRÍGUEZ </p>
 </footer>
 
-<script src="Luminous.min.js"></script>
+<script src="Luminous.min.js" defer></script>
+
 <script>
-    window.addEventListener('load', function() {
+    document.addEventListener("DOMContentLoaded", function() {
+        // Verificamos si Luminous existe antes de intentar usarlo
         if (typeof LuminousGallery !== 'undefined') {
             new LuminousGallery(document.querySelectorAll(".galeria"));
+            console.log("Galería Luminous inicializada correctamente.");
+        } else {
+            console.error("Error: LuminousGallery no se ha cargado. Verifica el nombre del archivo js.");
         }
     });
 </script>
