@@ -1,16 +1,31 @@
-/* --- CONFIGURACIÓN BASE (Esto es lo que te faltaba) --- */
+/* --- CONFIGURACIÓN BASE --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { 
-    background-color: #000; 
-    color: #fff; 
-    font-family: 'Inter', sans-serif; 
-    overflow-x: hidden; 
+html { scroll-behavior: smooth; }
+body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+/* --- SPLASH SCREEN (FOTO DE FONDO CON OPACIDAD) --- */
+.splash {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('boda1.webp'); /* Asegúrate de que este archivo exista */
+    background-size: cover;
+    background-position: center;
+}
+
+.splash-content h1 {
+    font-size: 3rem;
+    letter-spacing: 15px;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
 /* --- SECCIONES Y GRID --- */
 section {
-    padding: 60px 2%;
-    max-width: 1800px;
+    padding: 100px 5%;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -27,13 +42,7 @@ section {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px; 
-}
-
-.galeria {
-    display: block;
-    width: 100%;
-    overflow: hidden;
+    gap: 30px;
 }
 
 .galeria img {
@@ -53,5 +62,5 @@ section {
 /* --- AJUSTE MÓVIL --- */
 @media (max-width: 768px) {
     .grid { grid-template-columns: 1fr; }
-    .galeria img { height: 400px; filter: grayscale(0); }
+    .splash-content h1 { font-size: 1.8rem; }
 }
