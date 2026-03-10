@@ -1,21 +1,31 @@
-/* ... (Todo tu código anterior hasta .galeria img) ... */
+/* --- NUEVA DISTRIBUCIÓN (GRID) --- */
+.grid {
+    display: grid;
+    /* Esto define que las columnas midan mínimo 300px, 
+       y se repartan el espacio sobrante automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Espacio exacto entre imágenes */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Eliminamos la dependencia de las "row" para que el grid tome el control */
+.galeria {
+    display: block;
+    width: 100%;
+}
 
 .galeria img {
     width: 100%;
-    /* CAMBIO 1: Altura fija para que todas las filas midan lo mismo */
-    height: 350px; 
-    /* CAMBIO 2: Esto evita que la foto se deforme o estire */
-    object-fit: cover; 
+    height: 350px; /* Todas miden lo mismo, estéticamente ordenadas */
+    object-fit: cover; /* Corta la imagen para que encaje perfectamente */
     display: block;
     filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    transition: filter 0.6s ease, transform 0.6s ease;
+    transition: all 0.6s ease;
 }
 
-/* CAMBIO 3: Aseguramos que los enlaces no tengan el color azul por defecto */
-a {
-    color: inherit;
-    text-decoration: none;
+.galeria:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.02);
 }
-
-/* ... (El resto de tu código queda igual) ... */
