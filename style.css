@@ -1,106 +1,21 @@
-/* --- CONFIGURACIÓN BASE --- */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-}
-
-html { scroll-behavior: smooth; }
-
-body { 
-    background-color: #000; 
-    color: #fff; 
-    font-family: 'Inter', sans-serif; 
-    overflow-x: hidden; 
-    -webkit-font-smoothing: antialiased;
-}
-
-/* --- PORTADA (SPLASH) --- */
-.splash {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('foto5.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-/* --- HEADER --- */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 30px 5%;
-    z-index: 2000;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-/* --- ESTRUCTURA DE GALERÍA --- */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 5%;
-}
-
-.galeria {
-    display: block;
-    overflow: hidden;
-    text-decoration: none;
-}
+/* ... (Todo tu código anterior hasta .galeria img) ... */
 
 .galeria img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    /* CAMBIO 1: Altura fija para que todas las filas midan lo mismo */
+    height: 350px; 
+    /* CAMBIO 2: Esto evita que la foto se deforme o estire */
+    object-fit: cover; 
     display: block;
     filter: grayscale(100%);
-    transition: all 0.6s ease;
+    -webkit-filter: grayscale(100%);
+    transition: filter 0.6s ease, transform 0.6s ease;
 }
 
-.galeria:hover img {
-    filter: grayscale(0%);
-    transform: scale(1.05);
-}
-
-/* --- FOOTER Y OTROS --- */
-.titulo-seccion {
-    font-weight: 200;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    margin: 80px 0 40px;
-    text-align: center;
-}
-
+/* CAMBIO 3: Aseguramos que los enlaces no tengan el color azul por defecto */
 a {
-    color: #fff;
+    color: inherit;
     text-decoration: none;
 }
 
-/* --- AJUSTE MÓVIL --- */
-@media (max-width: 768px) {
-    header { padding: 20px 5%; }
-    nav { flex-direction: column; gap: 15px; }
-    .galeria img { height: 250px; filter: grayscale(0%); }
-}
-/* FUERZA BRUTA: Elimina cualquier estilo de enlace previo */
-a, a:link, a:visited, a:hover, a:active {
-    color: #fff !important;
-    text-decoration: none !important;
-    background-color: transparent !important;
-    outline: none !important;
-}
+/* ... (El resto de tu código queda igual) ... */
