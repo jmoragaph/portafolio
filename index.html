@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <head>
-    <style>
-        body { background-color: #000 !important; color: #fff !important; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        img { width: 100%; height: 300px; object-fit: cover; }
-    </style>
-</head> <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARÍA RODRÍGUEZ</title>
+    
     <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -81,10 +78,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/Luminous.min.js"></script>
 <script>
-    // Se inicializa solo cuando toda la página y fotos han cargado
-    window.onload = function() {
-        new LuminousGallery(document.querySelectorAll(".galeria"));
-    };
+    window.addEventListener('load', function() {
+        if (typeof LuminousGallery !== 'undefined') {
+            new LuminousGallery(document.querySelectorAll(".galeria"));
+        }
+    });
 </script>
 
 </body>
