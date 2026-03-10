@@ -92,3 +92,7 @@ nav {
     nav { flex-direction: column; gap: 15px; }
     .galeria img { height: 250px; filter: grayscale(0%); }
 }
+/* PRUEBA DE CONEXIÓN */
+body {
+    border: 10px solid red !important;
+}
