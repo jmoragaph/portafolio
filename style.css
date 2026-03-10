@@ -97,3 +97,10 @@ a {
     nav { flex-direction: column; gap: 15px; }
     .galeria img { height: 250px; filter: grayscale(0%); }
 }
+/* FUERZA BRUTA: Elimina cualquier estilo de enlace previo */
+a, a:link, a:visited, a:hover, a:active {
+    color: #fff !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+}
