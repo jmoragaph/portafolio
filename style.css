@@ -1,23 +1,57 @@
-/* --- AJUSTE DE ANCHO DE SECCIÓN --- */
+/* --- CONFIGURACIÓN BASE (Esto es lo que te faltaba) --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    background-color: #000; 
+    color: #fff; 
+    font-family: 'Inter', sans-serif; 
+    overflow-x: hidden; 
+}
+
+/* --- SECCIONES Y GRID --- */
 section {
-    padding: 60px 2%; /* Reducimos el padding lateral del 5% al 2% */
-    max-width: 1800px; /* Aumentamos el ancho para que la galería se expanda */
+    padding: 60px 2%;
+    max-width: 1800px;
     margin: 0 auto;
 }
 
-/* --- AJUSTE DE GRID PARA FOTOS MÁS GRANDES --- */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Mantenemos 2 columnas */
-    gap: 30px; /* Un poco más de espacio entre fotos */
+.titulo-seccion {
+    font-weight: 200;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    opacity: 0.9;
+    text-align: center;
 }
 
-/* --- TAMAÑO DE LA IMAGEN --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; 
+}
+
+.galeria {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
 .galeria img {
     width: 100%;
-    height: 600px; /* Aumentamos la altura de 400px a 600px */
+    height: 600px;
     object-fit: cover;
     display: block;
     filter: grayscale(100%);
     transition: filter 0.6s ease, transform 0.6s ease;
+}
+
+.galeria:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+/* --- AJUSTE MÓVIL --- */
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    .galeria img { height: 400px; filter: grayscale(0); }
 }
