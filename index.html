@@ -2,18 +2,84 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARÍA RODRÍGUEZ</title>
-    
     <link rel="stylesheet" href="style.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/Luminous.min.js"></script>
-    
-    <script>
+<div class="splash">
+    <div class="splash-content">
+        <h1 class="fade-in">MARÍA RODRÍGUEZ</h1>
+        <p class="fade-in-delayed">ARQUITECTURA Y NARRATIVA VISUAL</p>
+    </div>
+</div>
+
+<header>
+    <nav>
+        <div class="logo">MR</div>
+        <ul>
+            <li><a href="#arquitectura">Arq</a></li>
+            <li><a href="#urbano">Urbano</a></li>
+            <li><a href="#ataraxia">Obras</a></li>
+            <li><a href="#contacto" class="btn-contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="arquitectura">
+        <h2 class="titulo-seccion">Arquitectura</h2>
+        <div class="grid">
+            <a class="galeria" href="foto1.jpg"><img src="foto1.jpg" alt="Obra"></a>
+            <a class="galeria" href="foto2.jpg"><img src="foto2.jpg" alt="Obra"></a>
+            <a class="galeria" href="foto6.jpg"><img src="foto6.jpg" alt="Obra"></a>
+            <a class="galeria" href="foto4.jpg"><img src="foto4.jpg" alt="Obra"></a>
+        </div>
+    </section>
+
+    <hr class="divisor">
+
+    <section id="urbano">
+        <h2 class="titulo-seccion">Espacio Urbano</h2>
+        <div class="grid">
+            <a class="galeria" href="DSC04808.jpeg"><img src="DSC04808.jpeg" alt="Urbano"></a>
+            <a class="galeria" href="DSC04814.jpeg"><img src="DSC04814.jpeg" alt="Urbano"></a>
+            <a class="galeria" href="DSC04883.jpeg"><img src="DSC04883.jpeg" alt="Urbano"></a>
+            <a class="galeria" href="DSC04924.jpeg"><img src="DSC04924.jpeg" alt="Urbano"></a>
+        </div>
+    </section>
+
+    <hr class="divisor">
+
+    <section id="ataraxia">
+        <h2 class="titulo-seccion">Minimal Project: Ataraxia</h2>
+        <div class="grid">
+            <a class="galeria" href="04.jpg"><img src="04.jpg" alt="Ataraxia"></a>
+            <a class="galeria" href="09.jpg"><img src="09.jpg" alt="Ataraxia"></a>
+            <a class="galeria" href="08.jpg"><img src="08.jpg" alt="Ataraxia"></a>
+            <a class="galeria" href="03.jpg"><img src="03.jpg" alt="Ataraxia"></a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="social-links">
+        <a href="mailto:Jotaemearq@gmail.com" class="link-subrayado">EMAIL</a>
+        <a href="https://instagram.com/jmoraga.ph" target="_blank" class="link-subrayado">INSTAGRAM</a>
+    </div>
+    <p>© 2026 MARÍA RODRÍGUEZ </p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/Luminous.min.js"></script>
+<script>
+    // Se inicializa solo cuando toda la página y fotos han cargado
+    window.onload = function() {
         new LuminousGallery(document.querySelectorAll(".galeria"));
-    </script>
+    };
+</script>
+
 </body>
 </html>
