@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARÍA RODRÍGUEZ | Fotografía</title>
-    <style>
-    /* ESTILOS DE EMERGENCIA */
-    body { background-color: #000 !important; color: #fff !important; font-family: sans-serif !important; }
-    a { color: #fff !important; text-decoration: none !important; }
-    .grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .galeria img { width: 300px; height: 300px; object-fit: cover; border: 2px solid white; }
-</style>
+    <title>MARÍA RODRÍGUEZ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    
 
 <div class="splash">
     <div class="splash-content">
@@ -40,10 +34,14 @@
     <section id="arquitectura">
         <h2 class="titulo-seccion">Arquitectura</h2>
         <div class="grid">
-            <a class="galeria" href="foto1.jpg"><img src="foto1.jpg" alt="Arquitectura 1"></a>
-            <a class="galeria" href="foto2.jpg"><img src="foto2.jpg" alt="Arquitectura 2"></a>
-            <a class="galeria" href="foto6.jpg"><img src="foto6.jpg" alt="Arquitectura 3"></a>
-            <a class="galeria" href="foto4.jpg"><img src="foto4.jpg" alt="Arquitectura 4"></a>
+            <div class="row">
+                <a class="galeria" href="foto1.jpg"><img src="foto1.jpg"></a>
+                <a class="galeria" href="foto2.jpg"><img src="foto2.jpg"></a>
+            </div>
+            <div class="row">
+                <a class="galeria" href="foto6.jpg"><img src="foto6.jpg"></a>
+                <a class="galeria" href="foto4.jpg"><img src="foto4.jpg"></a>
+            </div>
         </div>
     </section>
 
@@ -52,10 +50,14 @@
     <section id="urbano">
         <h2 class="titulo-seccion">Espacio Urbano</h2>
         <div class="grid">
-            <a class="galeria" href="DSC04808.jpeg"><img src="DSC04808.jpeg" alt="Urbano 1"></a>
-            <a class="galeria" href="DSC04814.jpeg"><img src="DSC04814.jpeg" alt="Urbano 2"></a>
-            <a class="galeria" href="DSC04883.jpeg"><img src="DSC04883.jpeg" alt="Urbano 3"></a>
-            <a class="galeria" href="DSC04924.jpeg"><img src="DSC04924.jpeg" alt="Urbano 4"></a>
+            <div class="row">
+                <a class="galeria" href="DSC04808.jpeg"><img src="DSC04808.jpeg"></a>
+                <a class="galeria" href="DSC04814.jpeg"><img src="DSC04814.jpeg"></a>
+            </div>
+            <div class="row">
+                <a class="galeria" href="DSC04883.jpeg"><img src="DSC04883.jpeg"></a>
+                <a class="galeria" href="DSC04924.jpeg"><img src="DSC04924.jpeg"></a>
+            </div>
         </div>
     </section>
 
@@ -64,10 +66,14 @@
     <section id="ataraxia">
         <h2 class="titulo-seccion">Minimal Project: Ataraxia</h2>
         <div class="grid">
-            <a class="galeria" href="04.jpg"><img src="04.jpg" alt="Ataraxia 1"></a>
-            <a class="galeria" href="09.jpg"><img src="09.jpg" alt="Ataraxia 2"></a>
-            <a class="galeria" href="08.jpg"><img src="08.jpg" alt="Ataraxia 3"></a>
-            <a class="galeria" href="03.jpg"><img src="03.jpg" alt="Ataraxia 4"></a>
+            <div class="row">
+                <a class="galeria" href="04.jpg"><img src="04.jpg"></a>
+                <a class="galeria" href="09.jpg"><img src="09.jpg"></a>
+            </div>
+            <div class="row">
+                <a class="galeria" href="08.jpg"><img src="08.jpg"></a>
+                <a class="galeria" href="03.jpg"><img src="03.jpg"></a>
+            </div>
         </div>
     </section>
 </main>
@@ -77,9 +83,8 @@
         <a href="mailto:Jotaemearq@gmail.com" class="link-subrayado">EMAIL</a>
         <a href="https://instagram.com/jmoraga.ph" target="_blank" class="link-subrayado">INSTAGRAM</a>
     </div>
-    <p>© 2026 MARÍA RODRÍGUEZ</p>
+    <p>© 2026 MARÍA RODRÍGUEZ </p>
 </footer>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/Luminous.min.js"></script>
 <script>
     new LuminousGallery(document.querySelectorAll(".galeria"));
