@@ -1,31 +1,31 @@
-/* --- NUEVA DISTRIBUCIÓN (GRID) --- */
+/* --- DISTRIBUCIÓN MODERNA Y FLUIDA --- */
 .grid {
     display: grid;
-    /* Esto define que las columnas midan mínimo 300px, 
-       y se repartan el espacio sobrante automáticamente */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; /* Espacio exacto entre imágenes */
+    /* Columnas dinámicas: entre 400px y 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px; /* Más espacio para que las fotos respiren */
+    padding: 20px 5%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5%;
 }
 
-/* Eliminamos la dependencia de las "row" para que el grid tome el control */
 .galeria {
     display: block;
-    width: 100%;
+    transition: opacity 0.4s ease;
+}
+
+.galeria:hover {
+    opacity: 0.7; /* Efecto de suavidad, no de "zoom" agresivo */
 }
 
 .galeria img {
     width: 100%;
-    height: 350px; /* Todas miden lo mismo, estéticamente ordenadas */
-    object-fit: cover; /* Corta la imagen para que encaje perfectamente */
+    height: auto; /* IMPORTANTE: Mantiene la proporción original de la foto */
     display: block;
     filter: grayscale(100%);
-    transition: all 0.6s ease;
+    transition: filter 0.5s ease;
 }
 
 .galeria:hover img {
     filter: grayscale(0%);
-    transform: scale(1.02);
 }
