@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARÍA RODRÍGUEZ</title>
+    <title>MARÍA RODRÍGUEZ | ARQUITECTURA Y NARRATIVA VISUAL</title>
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="luminous-basic.min.css">
@@ -25,6 +25,7 @@
             <li><a href="#arquitectura">Arq</a></li>
             <li><a href="#urbano">Urbano</a></li>
             <li><a href="#ataraxia">Obras</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
             <li><a href="#contacto" class="btn-contacto">Contacto</a></li>
         </ul>
     </nav>
@@ -34,10 +35,10 @@
     <section id="arquitectura">
         <h2 class="titulo-seccion">Arquitectura</h2>
         <div class="grid">
-            <a class="galeria" href="foto1.webp"><img src="foto1.webp" alt="Obra"></a>
-            <a class="galeria" href="foto2.webp"><img src="foto2.webp" alt="Obra"></a>
-            <a class="galeria" href="foto6.webp"><img src="foto6.webp" alt="Obra"></a>
-            <a class="galeria" href="foto4.webp"><img src="foto4.webp" alt="Obra"></a>
+            <a class="galeria" href="foto1.webp"><img src="foto1.webp" alt="Arquitectura"></a>
+            <a class="galeria" href="foto2.webp"><img src="foto2.webp" alt="Arquitectura"></a>
+            <a class="galeria" href="foto6.webp"><img src="foto6.webp" alt="Arquitectura"></a>
+            <a class="galeria" href="foto4.webp"><img src="foto4.webp" alt="Arquitectura"></a>
         </div>
     </section>
 
@@ -46,10 +47,10 @@
     <section id="urbano">
         <h2 class="titulo-seccion">Espacio Urbano</h2>
         <div class="grid">
-            <a class="galeria" href="DSC04808.jpeg"><img src="DSC04808.jpeg" alt="Urbano"></a>
-            <a class="galeria" href="DSC04814.jpeg"><img src="DSC04814.jpeg" alt="Urbano"></a>
-            <a class="galeria" href="DSC04883.jpeg"><img src="DSC04883.jpeg" alt="Urbano"></a>
-            <a class="galeria" href="DSC04924.jpeg"><img src="DSC04924.jpeg" alt="Urbano"></a>
+            <a class="galeria" href="DSC04808.jpeg"><img src="DSC04808.jpeg" alt="Espacio Urbano"></a>
+            <a class="galeria" href="DSC04814.jpeg"><img src="DSC04814.jpeg" alt="Espacio Urbano"></a>
+            <a class="galeria" href="DSC04883.jpeg"><img src="DSC04883.jpeg" alt="Espacio Urbano"></a>
+            <a class="galeria" href="DSC04924.jpeg"><img src="DSC04924.jpeg" alt="Espacio Urbano"></a>
         </div>
     </section>
 
@@ -64,6 +65,21 @@
             <a class="galeria" href="03.jpg"><img src="03.jpg" alt="Ataraxia"></a>
         </div>
     </section>
+
+    <hr class="divisor">
+
+    <section id="sobre-mi">
+        <div class="sobre-mi-container">
+            <div class="sobre-mi-texto">
+                <h2 class="titulo-seccion" style="text-align: left; margin-bottom: 30px;">Sobre mí</h2>
+                <p>Arquitecta con enfoque en la narrativa visual y el espacio urbano. Mi trabajo busca capturar la esencia del minimalismo a través de la fotografía y el diseño, explorando la relación entre la estructura, la luz y la forma.</p>
+                <p style="margin-top: 20px;">Especializada en documentación de obra y proyectos de paisaje, entiendo la arquitectura como un lenguaje que se narra a través del encuadre.</p>
+            </div>
+            <div class="sobre-mi-foto">
+                <img src="MARIARODRIGUEZART.webp" alt="María Rodríguez" class="foto-perfil">
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer>
@@ -71,33 +87,14 @@
         <a href="mailto:Jotaemearq@gmail.com" class="link-subrayado">EMAIL</a>
         <a href="https://instagram.com/jmoraga.ph" target="_blank" class="link-subrayado">INSTAGRAM</a>
     </div>
-    <p>© 2026 MARÍA RODRÍGUEZ </p>
+    <p>© 2026 MARÍA RODRÍGUEZ</p>
 </footer>
-<section id="sobre-mi">
-    <div class="sobre-mi-container">
-        <div class="sobre-mi-texto">
-            <h2 class="titulo-seccion" style="text-align: left; margin-bottom: 30px;">Sobre mí</h2>
-            <p>
-                Arquitecta con enfoque en la narrativa visual y el espacio urbano. Mi trabajo busca capturar la esencia del minimalismo a través de la fotografía y el diseño, explorando la relación entre la estructura, la luz y la forma.</p>
-                <p>Especializada en documentación de obra y proyectos de paisaje, entiendo la arquitectura como un lenguaje que se narra a través del encuadre.</p>
-            </div>
-            </p>
-        </div>
-        <div class="sobre-mi-foto">
-            <img src="MARIARODRIGUEZART.webp" alt="María Rodríguez" class="foto-perfil">
-        </div>
-    </div>
-</section>
-<script src="Luminous.min.js" defer></script>
 
+<script src="Luminous.min.js" defer></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Verificamos si Luminous existe antes de intentar usarlo
         if (typeof LuminousGallery !== 'undefined') {
             new LuminousGallery(document.querySelectorAll(".galeria"));
-            console.log("Galería Luminous inicializada correctamente.");
-        } else {
-            console.error("Error: LuminousGallery no se ha cargado. Verifica el nombre del archivo js.");
         }
     });
 </script>
