@@ -1,104 +1,395 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARÍA RODRÍGUEZ | ARQUITECTURA Y NARRATIVA VISUAL</title>
-    
+
+    <title>María Rodríguez — Arquitectura y Narrativa Visual</title>
+
+    <meta
+        name="description"
+        content="Portfolio de María Rodríguez. Fotografía de arquitectura, espacio urbano y narrativa visual."
+    >
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="luminous-basic.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet"
+    >
 </head>
+
 <body>
 
-<div class="splash">
-    <div class="splash-content">
-        <h1 class="fade-in">MARÍA RODRÍGUEZ</h1>
-        <p class="fade-in-delayed">ARQUITECTURA Y NARRATIVA VISUAL</p>
-    </div>
-</div>
+    <!-- HEADER -->
+    <header class="header">
 
-<header>
-    <nav>
-        <div class="logo">MR</div>
-        <ul>
-            <li><a href="#arquitectura">Arq</a></li>
-            <li><a href="#urbano">Urbano</a></li>
-            <li><a href="#ataraxia">Obras</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#contacto" class="btn-contacto">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+        <a href="#inicio" class="logo">
+            María Rodríguez
+        </a>
 
-<main>
-    <section id="arquitectura">
-        <h2 class="titulo-seccion">Arquitectura</h2>
-        <div class="grid">
-            <a class="galeria" href="foto1.webp"><img src="foto1.webp" alt="Arquitectura"></a>
-            <a class="galeria" href="foto2.webp"><img src="foto2.webp" alt="Arquitectura"></a>
-            <a class="galeria" href="foto6.webp"><img src="foto6.webp" alt="Arquitectura"></a>
-            <a class="galeria" href="foto4.webp"><img src="foto4.webp" alt="Arquitectura"></a>
-        </div>
-    </section>
+        <nav class="nav">
+            <a href="#arquitectura">Arquitectura</a>
+            <a href="#urbano">Espacio urbano</a>
+            <a href="#ataraxia">Ataraxia</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
 
-    <hr class="divisor">
+    </header>
 
-    <section id="urbano">
-        <h2 class="titulo-seccion">Espacio Urbano</h2>
-        <div class="grid">
-            <a class="galeria" href="fotografiaarquitecturaamsterdam1.webp"><img src="fotografiaarquitecturaamsterdam1.webp" alt="Espacio Urbano"></a>
-            <a class="galeria" href="fotografiaarquitecturaamsterdam2.webp"><img src="fotografiaarquitecturaamsterdam2.webp" alt="Espacio Urbano"></a>
-            <a class="galeria" href="fotografiaarquitecturaamsterdam3.webp"><img src="fotografiaarquitecturaamsterdam3.webp" alt="Espacio Urbano"></a>
-            <a class="galeria" href="fotografiaarquitecturaamsterdam4.webp"><img src="fotografiaarquitecturaamsterdam4.webp" alt="Espacio Urbano"></a>
-        </div>
-    </section>
 
-    <hr class="divisor">
+    <main>
 
-    <section id="ataraxia">
-        <h2 class="titulo-seccion">Minimal Project: Ataraxia</h2>
-        <div class="grid">
-            <a class="galeria" href="04.jpg"><img src="04.jpg" alt="Ataraxia"></a>
-            <a class="galeria" href="09.jpg"><img src="09.jpg" alt="Ataraxia"></a>
-            <a class="galeria" href="08.jpg"><img src="08.jpg" alt="Ataraxia"></a>
-            <a class="galeria" href="03.jpg"><img src="03.jpg" alt="Ataraxia"></a>
-        </div>
-    </section>
+        <!-- PORTADA -->
+        <section id="inicio" class="hero">
 
-    <hr class="divisor">
+            <img
+                src="foto1.webp"
+                alt="Fotografía de arquitectura de María Rodríguez"
+                class="hero-image"
+            >
 
-    <section id="sobre-mi">
-        <div class="sobre-mi-container">
-            <div class="sobre-mi-texto">
-                <h2 class="titulo-seccion" style="text-align: left; margin-bottom: 30px;">Sobre mí</h2>
-                <p>Arquitecta con enfoque en la narrativa visual y el espacio urbano. Mi trabajo busca capturar la esencia del minimalismo a través de la fotografía y el diseño, explorando la relación entre la estructura, la luz y la forma.</p>
-                <p style="margin-top: 20px;">Especializada en documentación de obra y proyectos de paisaje, entiendo la arquitectura como un lenguaje que se narra a través del encuadre.</p>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-number">
+                    01 — Portfolio
+                </p>
+
+                <h1>
+                    Arquitectura<br>
+                    <em>como narrativa.</em>
+                </h1>
+
+                <p class="hero-description">
+                    Fotografía · Arquitectura · Espacio urbano
+                </p>
+
             </div>
-            <div class="sobre-mi-foto">
-                <img src="MARIARODRIGUEZART.webp" alt="María Rodríguez" class="foto-perfil">
+
+            <div class="scroll-indicator">
+                Scroll ↓
             </div>
-        </div>
-    </section>
-</main>
 
-<footer>
-    <div class="social-links">
-        <a href="mailto:Jotaemearq@gmail.com" class="link-subrayado">EMAIL</a>
-        <a href="https://instagram.com/jmoraga.ph" target="_blank" class="link-subrayado">INSTAGRAM</a>
-    </div>
-    <p>© 2026 MARÍA RODRÍGUEZ</p>
-</footer>
+        </section>
 
-<script src="Luminous.min.js" defer></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        if (typeof LuminousGallery !== 'undefined') {
-            new LuminousGallery(document.querySelectorAll(".galeria"));
-        }
-    });
-</script>
+
+        <!-- INTRO -->
+        <section class="intro">
+
+            <p class="intro-label">
+                María Rodríguez / Barcelona
+            </p>
+
+            <p class="intro-text">
+                Observo la arquitectura como una composición de
+                <em>luz, silencio, geometría y espacio.</em>
+            </p>
+
+        </section>
+
+
+        <!-- ARQUITECTURA -->
+        <section id="arquitectura" class="project">
+
+            <div class="project-header">
+
+                <span>01</span>
+
+                <h2>
+                    Arquitectura
+                </h2>
+
+                <p>
+                    Geometría, materia y luz.
+                </p>
+
+            </div>
+
+
+            <div class="editorial-grid arquitectura-grid">
+
+                <a class="galeria image-large" href="foto1.webp">
+                    <img
+                        src="foto1.webp"
+                        alt="Fotografía de arquitectura"
+                    >
+                </a>
+
+                <a class="galeria image-small" href="foto2.webp">
+                    <img
+                        src="foto2.webp"
+                        alt="Fotografía de arquitectura"
+                    >
+                </a>
+
+                <a class="galeria image-vertical" href="foto6.webp">
+                    <img
+                        src="foto6.webp"
+                        alt="Fotografía de arquitectura"
+                    >
+                </a>
+
+                <a class="galeria image-medium" href="foto4.webp">
+                    <img
+                        src="foto4.webp"
+                        alt="Fotografía de arquitectura"
+                    >
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESPACIO URBANO -->
+        <section id="urbano" class="project project-dark">
+
+            <div class="project-header">
+
+                <span>02</span>
+
+                <h2>
+                    Espacio Urbano
+                </h2>
+
+                <p>
+                    Fragmentos de ciudad y arquitectura cotidiana.
+                </p>
+
+            </div>
+
+
+            <div class="editorial-grid urbano-grid">
+
+                <a
+                    class="galeria image-vertical"
+                    href="fotografiaarquitecturaamsterdam1.webp"
+                >
+                    <img
+                        src="fotografiaarquitecturaamsterdam1.webp"
+                        alt="Arquitectura urbana en Amsterdam"
+                    >
+                </a>
+
+                <a
+                    class="galeria image-large"
+                    href="fotografiaarquitecturaamsterdam2.webp"
+                >
+                    <img
+                        src="fotografiaarquitecturaamsterdam2.webp"
+                        alt="Arquitectura urbana en Amsterdam"
+                    >
+                </a>
+
+                <a
+                    class="galeria image-small"
+                    href="fotografiaarquitecturaamsterdam3.webp"
+                >
+                    <img
+                        src="fotografiaarquitecturaamsterdam3.webp"
+                        alt="Arquitectura urbana en Amsterdam"
+                    >
+                </a>
+
+                <a
+                    class="galeria image-medium"
+                    href="fotografiaarquitecturaamsterdam4.webp"
+                >
+                    <img
+                        src="fotografiaarquitecturaamsterdam4.webp"
+                        alt="Arquitectura urbana en Amsterdam"
+                    >
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ATARAXIA -->
+        <section id="ataraxia" class="project ataraxia">
+
+            <div class="project-header">
+
+                <span>03</span>
+
+                <h2>
+                    Ataraxia
+                </h2>
+
+                <p>
+                    Un estudio sobre silencio, forma y vacío.
+                </p>
+
+            </div>
+
+
+            <div class="ataraxia-intro">
+
+                <h3>
+                    Minimal Project<br>
+                    <em>Ataraxia</em>
+                </h3>
+
+            </div>
+
+
+            <div class="editorial-grid ataraxia-grid">
+
+                <a class="galeria image-large" href="04.jpg">
+                    <img
+                        src="04.jpg"
+                        alt="Ataraxia"
+                    >
+                </a>
+
+                <a class="galeria image-small" href="09.jpg">
+                    <img
+                        src="09.jpg"
+                        alt="Ataraxia"
+                    >
+                </a>
+
+                <a class="galeria image-vertical" href="08.jpg">
+                    <img
+                        src="08.jpg"
+                        alt="Ataraxia"
+                    >
+                </a>
+
+                <a class="galeria image-medium" href="03.jpg">
+                    <img
+                        src="03.jpg"
+                        alt="Ataraxia"
+                    >
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi" class="about">
+
+            <div class="about-number">
+                04
+            </div>
+
+
+            <div class="about-title">
+
+                <h2>
+                    Sobre<br>
+                    <em>mí.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="about-photo">
+
+                <img
+                    src="MARIARODRIGUEZART.webp"
+                    alt="María Rodríguez"
+                >
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p class="about-lead">
+                    La arquitectura también puede leerse como una imagen.
+                </p>
+
+                <p>
+                    Arquitecta con enfoque en la narrativa visual y el espacio urbano.
+                    Mi trabajo explora la relación entre estructura, luz, geometría y forma.
+                </p>
+
+                <p>
+                    Especializada en documentación de obra y proyectos de paisaje,
+                    entiendo la arquitectura como un lenguaje que también puede narrarse
+                    a través del encuadre.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="contact">
+
+            <p>
+                Contacto
+            </p>
+
+            <h2>
+                Hablemos de<br>
+                <em>arquitectura.</em>
+            </h2>
+
+            <a
+                href="mailto:Jotaemearq@gmail.com"
+                class="contact-email"
+            >
+                Jotaemearq@gmail.com
+            </a>
+
+            <div class="contact-social">
+
+                <a
+                    href="https://instagram.com/jmoraga.ph"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Instagram ↗
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <span>
+            © 2026 María Rodríguez
+        </span>
+
+        <span>
+            Architecture & Visual Narrative
+        </span>
+
+    </footer>
+
+
+    <!-- LIGHTBOX -->
+    <script src="Luminous.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            if (typeof LuminousGallery !== "undefined") {
+
+                new LuminousGallery(
+                    document.querySelectorAll(".galeria")
+                );
+
+            }
+
+        });
+    </script>
 
 </body>
 </html>
