@@ -1,63 +1,73 @@
 
-/* ================================
-   INTERIORES - GALERIA EDITORIAL
-   ================================ */
+/* ==============================
+   INTERIORES - HOTEL NERI
+============================== */
 
 #interiores {
-    width: 100%;
-    max-width: none;
-    padding: 120px 5vw;
     background: #f2f0eb;
+    padding: 8vw 5vw 12vw;
 }
+
+#interiores .interiores-intro {
+    max-width: 650px;
+    margin: 0 0 7vw auto;
+}
+
+#interiores .interiores-intro span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
+}
+
+#interiores .interiores-intro p {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(22px, 3vw, 38px);
+    line-height: 1.4;
+}
+
+/* Galería editorial */
 
 #interiores .interiores-grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 40px 0;
-    width: 100%;
+    gap: 4vw 2vw;
     align-items: start;
 }
 
-/* Primera imagen: horizontal y grande */
+/* Primera fotografía horizontal */
+
 #interiores .interior-primary {
     grid-column: 1 / 13;
-    display: block;
     width: 100%;
-    height: auto;
-    margin: 0;
 }
 
-/* Segunda imagen: desplazada editorialmente */
+/* Segunda fotografía */
+
 #interiores .interior-secondary {
     grid-column: 4 / 12;
-    display: block;
     width: 100%;
-    height: auto;
-    margin: 70px 0 0;
+    margin-top: 4vw;
 }
 
-/* Mostrar imagen completa sin recortar */
-#interiores .interiores-grid .galeria img {
+/* Evitar recortes y blanco y negro */
+
+#interiores .interiores-grid img {
     display: block;
     width: 100%;
     height: auto !important;
     max-height: none !important;
-    aspect-ratio: auto !important;
-    object-fit: contain !important;
+    aspect-ratio: auto;
+    object-fit: contain;
     filter: none !important;
 }
 
-/* Mantener color original */
-#interiores .interiores-grid .galeria:hover img {
-    filter: none !important;
-    transform: none;
-}
+/* Adaptación móvil */
 
-/* MOVIL */
 @media (max-width: 700px) {
 
     #interiores {
-        padding: 80px 20px;
+        padding: 100px 20px;
     }
 
     #interiores .interiores-grid {
@@ -66,14 +76,11 @@
 
     #interiores .interior-primary,
     #interiores .interior-secondary {
-        display: block;
         width: 100%;
-        margin: 0 0 35px !important;
+        margin: 0 0 30px;
     }
 
     #interiores .interiores-grid img {
-        width: 100%;
         height: auto !important;
-        max-height: none !important;
     }
 }
