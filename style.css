@@ -996,3 +996,22 @@ footer {
     }
 
 }
+
+/* CREDITOS HOTEL NERI */
+
+.interiores-creditos {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.interiores-creditos p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    line-height: 1.8;
+    margin-bottom: 6px;
+    opacity: 0.65;
+}
+
